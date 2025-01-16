@@ -63,3 +63,32 @@ div.menu-photo img {
     object-fit: cover;
     width: 100%;
 }
+
+div.menu-tile-name {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 16px;
+    align-self: stretch;
+    text-align: center;
+}
+
+div.menu-tile-description {
+    font-size: 12px;
+    align-self: stretch;
+    text-align: center;
+    padding: 0 16px;
+    padding-bottom: 16px;
+    height: 60px;
+}
+
+div.menu-price-row {
+    display: flex;
+    flex-direction: row; /* Optional, sdh by default */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+span.price-description {
+    font-size: 12px;
+}
