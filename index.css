@@ -11,6 +11,10 @@ body {
     background-color: white;
 }
 
+button {
+    all: unset;
+}
+
 div.appbar {
     display: flex;
     flex-direction: row;
@@ -86,7 +90,8 @@ div.menu-tile-description {
 
 div.menu-price-row {
     display: flex;
-    flex-direction: row; /* Optional, sdh by default */
+    flex-direction: row;
+    /* Optional, sdh by default */
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
@@ -94,6 +99,22 @@ div.menu-price-row {
 
 span.price-description {
     font-size: 12px;
+}
+
+div.price-and-qty {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price {
+    margin-right: 8px;
+}
+
+#qty {
+    font-size: 12px;
+    width: 16px;
+    text-align: center;
 }
 
 @media (min-width: 600px) {
