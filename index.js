@@ -44,25 +44,16 @@ const menus = [{
     }]
 }];
 
-let qty = 0;
-let qty2 = 0;
+const cart = [
+    /// TODO: Create data structure for menu shopping cart
+];
 
-function addQty() {
-    qty = qty + 1;
-    document.getElementById("qty").innerHTML = qty;
+function addQty(menuIndex, priceIndex) {
+    /// TODO: Access qty of menuIndex and priceIndex in cart, and increment by 1
+    document.getElementById("qty" + menuIndex + priceIndex).innerHTML = qty;
 }
 
-function substractQty() {
-    qty = qty - 1;
-    document.getElementById("qty").innerHTML = qty;
-}
-
-function addQty2() {
-    qty2 = qty2 + 1;
-    document.getElementById("qty2").innerHTML = qty2;
-}
-
-function substractQty2() {
-    qty2 = qty2 - 1;
-    document.getElementById("qty2").innerHTML = qty2;
+function substractQty(menuIndex, priceIndex) {
+    /// TODO: Access qty of menuIndex and priceIndex in cart, and decrement by 1
+    document.getElementById("qty" + menuIndex + priceIndex).innerHTML = qty;
 }

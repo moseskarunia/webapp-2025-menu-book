@@ -36,11 +36,11 @@
                 <span class="price-description"></span>
                 <div class="price-and-qty">
                     <span class="price">35</span>
-                    <button onclick='substractQty()'>
+                    <button onclick='substractQty(0,0)'>
                         <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
                     </button>
-                    <span class="qty" id="qty">0</span>
-                    <button onclick='addQty()'>
+                    <span class="qty" id="qty00">0</span>
+                    <button onclick='addQty(0,0)'>
                         <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
                     </button>
                 </div>
@@ -49,11 +49,11 @@
                 <span class="price-description">+ Grilled Salmon</span>
                 <div class="price-and-qty">
                     <span class="price">55</span>
-                    <button onclick='substractQty2()'>
+                    <button onclick='substractQty(0,1)'>
                         <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
                     </button>
-                    <span class="qty" id="qty2">0</span>
-                    <button onclick='addQty2()'>
+                    <span class="qty" id="qty01">0</span>
+                    <button onclick='addQty(0,1)'>
                         <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
                     </button>
                 </div>
@@ -73,7 +73,7 @@
                     <button>
                         <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
                     </button>
-                    <span id="qty">0</span>
+                    <span id="qty">0</span> <!--TODO: Update id, and apply css qty-->
                     <button>
                         <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
                     </button>
@@ -86,41 +86,7 @@
                     <button>
                         <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
                     </button>
-                    <span id="qty">0</span>
-                    <button>
-                        <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="menu-tile">
-            <div class="menu-photo">
-                <img src="./assets/salad.jpg" alt="salad">
-            </div>
-            <div class="menu-tile-name">Avocado Pesto Salad</div>
-            <div class="menu-tile-description">Home-grown vegetables with load of avocado, topped with mouthwatering
-                pesto salad</div>
-            <div class="menu-price-row">
-                <span class="price-description"></span>
-                <div class="price-and-qty">
-                    <span class="price">35</span>
-                    <button>
-                        <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
-                    </button>
-                    <span id="qty">0</span>
-                    <button>
-                        <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
-                    </button>
-                </div>
-            </div>
-            <div class="menu-price-row">
-                <span class="price-description">+ Grilled Salmon</span>
-                <div class="price-and-qty">
-                    <span class="price">55</span>
-                    <button>
-                        <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
-                    </button>
-                    <span id="qty">0</span>
+                    <span id="qty">0</span> <!--TODO: Update id, and apply css qty-->
                     <button>
                         <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
                     </button>
@@ -141,7 +107,7 @@
                     <button>
                         <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
                     </button>
-                    <span id="qty">0</span>
+                    <span id="qty">0</span> <!--TODO: Update id, and apply css qty-->
                     <button>
                         <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
                     </button>
@@ -154,7 +120,41 @@
                     <button>
                         <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
                     </button>
-                    <span id="qty">0</span>
+                    <span id="qty">0</span> <!--TODO: Update id, and apply css qty-->
+                    <button>
+                        <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-tile">
+            <div class="menu-photo">
+                <img src="./assets/salad.jpg" alt="salad">
+            </div>
+            <div class="menu-tile-name">Avocado Pesto Salad</div>
+            <div class="menu-tile-description">Home-grown vegetables with load of avocado, topped with mouthwatering
+                pesto salad</div>
+            <div class="menu-price-row">
+                <span class="price-description"></span>
+                <div class="price-and-qty">
+                    <span class="price">35</span>
+                    <button>
+                        <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
+                    </button>
+                    <span id="qty">0</span> <!--TODO: Update id, and apply css qty-->
+                    <button>
+                        <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
+                    </button>
+                </div>
+            </div>
+            <div class="menu-price-row">
+                <span class="price-description">+ Grilled Salmon</span>
+                <div class="price-and-qty">
+                    <span class="price">55</span>
+                    <button>
+                        <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
+                    </button>
+                    <span id="qty">0</span> <!--TODO: Update id, and apply css qty-->
                     <button>
                         <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
                     </button>
