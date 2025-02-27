@@ -45,15 +45,18 @@ const menus = [{
 }];
 
 const cart = [
-    /// TODO: Create data structure for menu shopping cart
+    [0, 0],
+    [0, 0],
+    [0, 0],
+    [0, 0]
 ];
 
 function addQty(menuIndex, priceIndex) {
-    /// TODO: Access qty of menuIndex and priceIndex in cart, and increment by 1
-    document.getElementById("qty" + menuIndex + priceIndex).innerHTML = qty;
+    cart[menuIndex][priceIndex] = cart[menuIndex][priceIndex] + 1;
+    document.getElementById("qty" + menuIndex + priceIndex).innerHTML = cart[menuIndex][priceIndex];
 }
 
 function substractQty(menuIndex, priceIndex) {
-    /// TODO: Access qty of menuIndex and priceIndex in cart, and decrement by 1
-    document.getElementById("qty" + menuIndex + priceIndex).innerHTML = qty;
+    cart[menuIndex][priceIndex] = cart[menuIndex][priceIndex] - 1;
+    document.getElementById("qty" + menuIndex + priceIndex).innerHTML = cart[menuIndex][priceIndex];
 }
