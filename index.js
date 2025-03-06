@@ -55,6 +55,26 @@ let menuArea = "";
 
 for (let i = 0; i < menus.length; i++) {
     const e = menus[i];
+    let menuPrices = "";
+
+    for (let j = 0; j < e.prices.length; j++) {
+        const f = e.prices[j];
+        menuPrices += `
+            <div class="menu-price-row">
+                <span class="price-description">${f.label}</span>
+                <div class="price-and-qty">
+                    <span class="price">${f.price}</span>
+                    <button onclick='substractQty(${i},${j})'>
+                        <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
+                    </button>
+                    <span class="qty" id="qty${i}${j}">0</span>
+                    <button onclick='addQty(${i},${j})'>
+                        <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
+                    </button>
+                </div>
+            </div>
+        `;
+    }
 
     menuArea += `
         <div class="menu-tile">
@@ -63,35 +83,12 @@ for (let i = 0; i < menus.length; i++) {
             </div>
             <div class="menu-tile-name">${e.title}</div>
             <div class="menu-tile-description">${e.description}</div>
-            <div class="menu-price-row">
-                <span class="price-description"></span>
-                <div class="price-and-qty">
-                    <span class="price">35</span>
-                    <button onclick='substractQty(0,0)'>
-                        <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
-                    </button>
-                    <span class="qty" id="qty00">0</span>
-                    <button onclick='addQty(0,0)'>
-                        <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
-                    </button>
-                </div>
-            </div>
-            <div class="menu-price-row">
-                <span class="price-description">+ Grilled Salmon</span>
-                <div class="price-and-qty">
-                    <span class="price">55</span>
-                    <button onclick='substractQty(0,1)'>
-                        <img src="assets/circle-minus.png" width="16" height="16" alt="minus-circle" />
-                    </button>
-                    <span class="qty" id="qty01">0</span>
-                    <button onclick='addQty(0,1)'>
-                        <img src="assets/circle-plus.png" width="16" height="16" alt="plus-circle" />
-                    </button>
-                </div>
-            </div>
+            ${menuPrices}
         </div>
     `;
 }
+
+document.getElementById("menu-area").innerHTML = menuArea;
 
 function addQty(menuIndex, priceIndex) {
     cart[menuIndex][priceIndex] = cart[menuIndex][priceIndex] + 1;
