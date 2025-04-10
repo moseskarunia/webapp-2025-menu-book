@@ -1,3 +1,5 @@
+// TODO 1: Buat 1 variabel untuk simpan nilai total keseluruhan menu yang ada di cart
+
 const menus = [{
     title: "Avocado Pesto Salad",
     description: "Home-grown vegetables with load of avocado, topped with mouthwatering pesto salad",
@@ -91,12 +93,18 @@ document.getElementById("menu-area").innerHTML = menuArea;
 
 function addQty(menuIndex, priceIndex) {
     cart[menuIndex][priceIndex] = cart[menuIndex][priceIndex] + 1;
+
+    // TODO 2: Tambahkan harga menu yang ditambahkan jumlahnya, ke variabel di TODO 1
+    // TODO 3: Tampilkan total menu sekarang, diawali dengan currency, di dalam elemen di TODO 6
     document.getElementById("qty" + menuIndex + priceIndex).innerHTML = cart[menuIndex][priceIndex];
 }
 
 function substractQty(menuIndex, priceIndex) {
     if (cart[menuIndex][priceIndex] > 0) {
         cart[menuIndex][priceIndex] = cart[menuIndex][priceIndex] - 1;
+        
+        // TODO 4: Tambahkan harga menu yang dikurangi jumlahnya, dari variabel di TODO 1
+        // TODO 5: Tampilkan total menu sekarang, diawali dengan currency, di dalam elemen di TODO 6
         document.getElementById("qty" + menuIndex + priceIndex).innerHTML = cart[menuIndex][priceIndex];
     }
 }
