@@ -148,6 +148,12 @@ div.price-and-qty {
 TODO 7: Tambah styling supaya terlihat seperti tombol hijau di kanan appbar 
 (pakai position:absolute, dan right:0)
 */
+.appbar > button {
+    all: unset;
+    padding: 0 16px;
+    position: absolute;
+    right: 0;
+}
 
 @media (min-width: 600px) {
     div.menu-area {
