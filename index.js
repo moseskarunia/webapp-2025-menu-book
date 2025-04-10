@@ -103,7 +103,7 @@ function substractQty(menuIndex, priceIndex) {
     if (cart[menuIndex][priceIndex] > 0) {
         cart[menuIndex][priceIndex] = cart[menuIndex][priceIndex] - 1;
         
-        // TODO 4: Tambahkan harga menu yang dikurangi jumlahnya, dari variabel di TODO 1
+        // TODO 4: Kurangi harga menu yang dikurangi jumlahnya, dari variabel di TODO 1
         // TODO 5: Tampilkan total menu sekarang, diawali dengan currency, di dalam elemen di TODO 6
         document.getElementById("qty" + menuIndex + priceIndex).innerHTML = cart[menuIndex][priceIndex];
     }
