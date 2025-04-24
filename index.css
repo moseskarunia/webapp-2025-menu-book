@@ -153,6 +153,10 @@ TODO 7: Tambah styling supaya terlihat seperti tombol hijau di kanan appbar
     padding: 0 16px;
     position: absolute;
     right: 0;
+    top: 0;
+    background-color: #4caf50;
+    height: 100%;
+    cursor: pointer;
 }
 
 @media (min-width: 600px) {
