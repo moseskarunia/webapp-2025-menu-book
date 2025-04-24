@@ -1,4 +1,3 @@
-// TODO 1: Buat 1 variabel untuk simpan nilai total keseluruhan menu yang ada di cart
 let totalPrice = 0;
 
 const menus = [{
@@ -95,9 +94,8 @@ document.getElementById("menu-area").innerHTML = menuArea;
 function addQty(menuIndex, priceIndex) {
     cart[menuIndex][priceIndex] = cart[menuIndex][priceIndex] + 1;
 
-    // TODO 2: Tambahkan harga menu yang ditambahkan jumlahnya, ke variabel di TODO 1
     totalPrice += menus[menuIndex].prices[priceIndex].price;
-    // TODO 3: Tampilkan total menu sekarang, diawali dengan currency, di dalam elemen di TODO 6
+
     document.getElementById("checkout").innerHTML = "Rp " + (totalPrice * 1000).toLocaleString();
 
     document.getElementById("qty" + menuIndex + priceIndex).innerHTML = cart[menuIndex][priceIndex];
@@ -106,12 +104,18 @@ function addQty(menuIndex, priceIndex) {
 function substractQty(menuIndex, priceIndex) {
     if (cart[menuIndex][priceIndex] > 0) {
         cart[menuIndex][priceIndex] = cart[menuIndex][priceIndex] - 1;
-        
-        // TODO 4: Kurangi harga menu yang dikurangi jumlahnya, dari variabel di TODO 1
+
         totalPrice -= menus[menuIndex].prices[priceIndex].price;
-        // TODO 5: Tampilkan total menu sekarang, diawali dengan currency, di dalam elemen di TODO 6 
         document.getElementById("checkout").innerHTML = "Rp " + (totalPrice * 1000).toLocaleString();
 
         document.getElementById("qty" + menuIndex + priceIndex).innerHTML = cart[menuIndex][priceIndex];
+    }
+}
+
+function checkout() {
+    if (totalPrice > 0) {
+        alert('Terimakasih atas pesanan anda: Rp ' + (totalPrice * 1000).toLocaleString());
+    } else {
+        alert('Pesan dulu minimal 1');
     }
 }
