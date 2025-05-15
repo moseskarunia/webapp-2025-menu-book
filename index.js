@@ -26,7 +26,11 @@ function substractQty(menuIndex, priceIndex) {
 
 function checkout() {
     if (totalPrice > 0) {
-        window.location.href=`order-confirmation/index.html?total-price=${totalPrice}`;
+        let url = `order-confirmation/index.html?`;
+        url += `total-price=${totalPrice}`;
+        url += `&cart=${JSON.stringify(cart)}`;
+
+        window.location.href = url;
         reset();
     } else {
         alert('Pesan dulu minimal 1');
@@ -41,13 +45,13 @@ function reset() {
     for (let i = 0; i < menus.length; i++) {
         cart.push([0, 0]);
     }
-    
+
     let menuArea = "";
-    
+
     for (let i = 0; i < menus.length; i++) {
         const e = menus[i];
         let menuPrices = "";
-    
+
         for (let j = 0; j < e.prices.length; j++) {
             const f = e.prices[j];
             menuPrices += `
@@ -66,7 +70,7 @@ function reset() {
                 </div>
             `;
         }
-    
+
         menuArea += `
             <div class="menu-tile">
                 <div class="menu-photo">
@@ -78,6 +82,6 @@ function reset() {
             </div>
         `;
     }
-    
+
     document.getElementById("menu-area").innerHTML = menuArea;
 }
