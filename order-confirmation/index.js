@@ -4,18 +4,16 @@ const cart = JSON.parse(params.get('cart'));
 
 let content = '';
 
-content += `<div>Terimakasih atas pesanan anda: Rp ${(totalPrice * 1000).toLocaleString()}</div>`;
-
 for (let i = 0; i < cart.length; i++) {
     const e = cart[i];
 
     if (e[0] > 0) {
-        content += `<div>${menus[i].title} (${menus[i].prices[0].label}): ${e[0]}</div>`;
+        content += `<div class="row"><div>${e[0]} ${menus[i].title} (${menus[i].prices[0].label})</div><div>${(e[0] * menus[i].prices[0].price * 1000).toLocaleString()}</div></div>`;
     }
 
     if (e[1] > 0) {
-        content += `<div>${menus[i].title} (${menus[i].prices[1].label}): ${e[1]}</div>`;
+        content += `<div class="row"><div>${e[1]} ${menus[i].title} (${menus[i].prices[1].label})</div><div>${(e[1] * menus[i].prices[1].price * 1000).toLocaleString()}</div></div>`;
     }
 }
 
-document.getElementById('outer').innerHTML = content;
+document.getElementById('ordered-menus').innerHTML = content;
